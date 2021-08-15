@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('mainpage');
     // return view('welcome');
-    return "Halaman tertulis";
 });
+
+// Route::get('anotherpage', function () {
+//     return view('anotherpage');
+// });
+
+Route::get('dosen', [DosenController::class, 'index']);
+// Route::get('dosen', 'DosenController@index'); //old style of laravel
