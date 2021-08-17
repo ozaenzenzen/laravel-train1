@@ -36,3 +36,6 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+//CRUD - Query Builder
+Route::get('/pegawai', [PegawaiController::class, 'index']);
