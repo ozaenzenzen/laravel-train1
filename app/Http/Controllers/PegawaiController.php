@@ -16,6 +16,23 @@ class PegawaiController extends Controller
         return view('/pegawai/index', ['pegawai'=>$pegawai]);
     }
 
+    public function tambah(){
+        // return view('/blog/home');
+        return view('/pegawai/tambah');
+    }
+
+    public function store(Request $request){
+        // insert data ke table pegawai
+        DB::table('pegawai')->insert([
+            'pegawai_nama'=>$request->nama,
+            'pegawai_jabatan'=>$request->jabatan,
+            'pegawai_umur'=>$request->umur,
+            'pegawai_alamat'=>$request->alamat,
+        ]);
+
+        return redirect('/pegawai');
+    }
+
     public function formulir()
     {
         return view('formulir');
