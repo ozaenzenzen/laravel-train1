@@ -28,8 +28,6 @@ Route::get('/', function () {
 Route::get('dosen', [DosenController::class, 'index']);
 // Route::get('dosen', 'DosenController@index'); //old style of laravel
 
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
-
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 
@@ -39,3 +37,7 @@ Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //CRUD - Query Builder
 Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
+// Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+
+Route::post('pegawai/store', [PegawaiController::class, 'store']);
