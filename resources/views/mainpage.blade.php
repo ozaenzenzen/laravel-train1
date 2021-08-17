@@ -10,7 +10,7 @@
         <a href="/dosen" class="list-group-item list-group-item-action">Link to Dosen Page</a>
         <a href="/formulir" class="list-group-item list-group-item-action">Link to Formulir Page</a>
         <a href="/blog" class="list-group-item list-group-item-action">Link to Blog Page</a>
-        <a href="#" class="list-group-item list-group-item-action">Link to Page 3</a>
+        <a href="/pegawai" class="list-group-item list-group-item-action">Link to Pegawai Page</a>
     </div>
 </div>
 @stop
