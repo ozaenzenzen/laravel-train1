@@ -46,3 +46,6 @@ Route::post('pegawai/store', [PegawaiController::class, 'store']);
 // edit
 Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
+
+// hapus
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
