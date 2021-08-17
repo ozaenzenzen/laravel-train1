@@ -13,21 +13,44 @@ class PegawaiController extends Controller
         $pegawai = DB::table('pegawai')->get();
 
         // mengirim data pegawai ke view index
-        return view('/pegawai/index', ['pegawai'=>$pegawai]);
+        return view('/pegawai/index', ['pegawai' => $pegawai]);
     }
 
-    public function tambah(){
+    public function tambah()
+    {
         // return view('/blog/home');
         return view('/pegawai/tambah');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         // insert data ke table pegawai
         DB::table('pegawai')->insert([
-            'pegawai_nama'=>$request->nama,
-            'pegawai_jabatan'=>$request->jabatan,
-            'pegawai_umur'=>$request->umur,
-            'pegawai_alamat'=>$request->alamat,
+            'pegawai_nama' => $request->nama,
+            'pegawai_jabatan' => $request->jabatan,
+            'pegawai_umur' => $request->umur,
+            'pegawai_alamat' => $request->alamat,
+        ]);
+
+        return redirect('/pegawai');
+    }
+
+    public function edit($id)
+    {
+        // ambil data pegawai berdasarkan id yang dipilih
+        $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
+        // passing data pegawai yang didapat ke view edit.blade.php
+        return view('/pegawai/edit', ['pegawai' => $pegawai]);
+    }
+
+    public function update(Request $request)
+    {
+        // update data pegawai
+        DB::table('pegawai')->where('pegawai_id', $request->id)->update([
+            'pegawai_nama' => $request->nama,
+            'pegawai_jabatan' => $request->jabatan,
+            'pegawai_umur' => $request->umur,
+            'pegawai_alamat' => $request->alamat,
         ]);
 
         return redirect('/pegawai');
