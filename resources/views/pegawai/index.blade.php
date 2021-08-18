@@ -5,7 +5,7 @@
 <div class="p-3 container-fluid" style="background-color: #34baeb; color:aliceblue">
     <h1>Pegawai Page</h1>
 </div>
-<div class="p-2">
+<div class="container-fluid">
     <div class="p-2 ml-3 my-2 container">
         <a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
     </div>
@@ -32,6 +32,15 @@
         </tr>
         @endforeach
     </table>
+
+    Halaman: {{$pegawai->currentPage()}} <br>
+    Jumlah Data: {{$pegawai->total()}} <br>
+    Data per Halaman: {{$pegawai->perPage()}} <br><br>
+
+    <div class="container-fluid">
+        {!! $pegawai->links('pagination::bootstrap-4') !!}
+    </div>
+
 </div>
 
 @stop
