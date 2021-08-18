@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
 use Database\Seeders\PegawaiSeeder;
 use Illuminate\Support\Facades\Route;
@@ -57,3 +58,6 @@ Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 // Form Controller
 Route::get('/input', [FormController::class, 'input']);
 Route::post('/proses', [FormController::class, 'proses']);
+
+// Karyawan Controller
+Route::get('/karyawan', [KaryawanController::class, 'index']);
