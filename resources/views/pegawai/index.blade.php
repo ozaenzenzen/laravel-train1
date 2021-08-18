@@ -3,10 +3,20 @@
 @section('content')
 
 <div class="p-3 container-fluid" style="background-color: #34baeb; color:aliceblue">
-    <h1>Pegawai Page</h1>
+    <h1>
+        <a style="color: white;" href="/pegawai">Pegawai Page</a>
+    </h1>
+
 </div>
 <div class="container-fluid">
-    <div class="p-2 ml-3 my-2 container">
+    <div>
+        Pencarian:<br>
+        <form action="/pegawai/cari" method="GET">
+            <input type="text" name="cari" placeholder="Cari Nama..." value="{{ old('cari')}}" class="form-control mt-2">
+            <input type="submit" value="Cari" class="btn btn-primary mt-2">
+        </form>
+    </div>
+    <div class="p-2 ml-0 my-2 container">
         <a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
     </div>
 
