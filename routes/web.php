@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
+use Database\Seeders\PegawaiSeeder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,7 @@ Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //CRUD - Query Builder
 Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
 // Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 
 // create
