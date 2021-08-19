@@ -12,7 +12,7 @@
             CRUD Karyawan - Update
         </div>
         <div class="card-body">
-            <a href="/pegawai" class="btn btn-primary">Kembali</a>
+            <a href="/karyawan" class="btn btn-primary">Kembali</a>
             <br><br>
 
             <form action="/karyawan/update/{{$karyawan->id}}" method="post">
