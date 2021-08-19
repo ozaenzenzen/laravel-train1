@@ -61,3 +61,13 @@ Route::post('/proses', [FormController::class, 'proses']);
 
 // Karyawan Controller
 Route::get('/karyawan', [KaryawanController::class, 'index']);
+
+
+// CRUD Karyawan - eloquent
+// create
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+
+// edit
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
