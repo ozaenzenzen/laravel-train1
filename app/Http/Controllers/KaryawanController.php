@@ -42,4 +42,19 @@ class KaryawanController extends Controller
         $karyawan = Karyawan::find($id);
         return view('/karyawan/edit', ['karyawan' => $karyawan]);
     }
+
+    public function update($id, Request $request)
+    {
+        $this->validate($request,[
+            'nama'=>'required',
+            'alamat'=>'required',
+        ]);
+
+        $karyawan = Karyawan::find($id);
+        $karyawan->nama = $request->nama;
+        $karyawan->alamat = $request->alamat;
+        $karyawan->save();
+
+        return redirect('/karyawan');
+    }
 }
