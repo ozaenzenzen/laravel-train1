@@ -70,4 +70,4 @@ Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 
 // edit
 Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
-Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::put('/karyawan/update/{id}', [KaryawanController::class, 'update']);
