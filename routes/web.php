@@ -71,3 +71,6 @@ Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 // edit
 Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
 Route::put('/karyawan/update/{id}', [KaryawanController::class, 'update']);
+
+// delete
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'delete']);
