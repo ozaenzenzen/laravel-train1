@@ -57,4 +57,11 @@ class KaryawanController extends Controller
 
         return redirect('/karyawan');
     }
+
+    public function delete($id)
+    {
+        $karyawan = Karyawan::find($id);
+        $karyawan->delete();
+        return redirect('/karyawan');
+    }
 }
