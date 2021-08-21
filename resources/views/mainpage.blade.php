@@ -13,6 +13,7 @@
         <a href="/pegawai" class="list-group-item list-group-item-action">Link to Pegawai Page</a>
         <a href="/input" class="list-group-item list-group-item-action">Link to Form Input Page</a>
         <a href="/karyawan" class="list-group-item list-group-item-action">Link to Karyawan Page</a>
+        <a href="/guru" class="list-group-item list-group-item-action">Link to Guru Page</a>
     </div>
 </div>
 @stop
