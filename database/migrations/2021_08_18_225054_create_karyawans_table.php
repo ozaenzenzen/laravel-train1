@@ -28,6 +28,7 @@ class CreateKaryawansTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('karyawan');
     }
 }
