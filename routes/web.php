@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
 use Database\Seeders\PegawaiSeeder;
@@ -74,3 +75,13 @@ Route::put('/karyawan/update/{id}', [KaryawanController::class, 'update']);
 
 // delete
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'delete']);
+
+Route::get('/guru', [GuruController::class, 'index']);
+Route::get('/guru/hapus/{id}', [GuruController::class, 'hapus']);
+Route::get('/guru/trash', [GuruController::class, 'trash']);
+
+Route::get('/guru/kembalikan/{id}', [GuruController::class, 'kembalikan']);
+Route::get('/guru/kembalikan_semua', [GuruController::class, 'kembalikan_semua']);
+
+Route::get('/guru/hapus_permanen/{id}', [GuruController::class, 'hapus_permanen']);
+Route::get('/guru/hapus_permanen_semua', [GuruController::class, 'hapus_permanen_semua']);
