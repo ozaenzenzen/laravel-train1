@@ -6,6 +6,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PenggunaController;
 use Database\Seeders\PegawaiSeeder;
 use Illuminate\Support\Facades\Route;
 
@@ -85,3 +86,6 @@ Route::get('/guru/kembalikan_semua', [GuruController::class, 'kembalikan_semua']
 
 Route::get('/guru/hapus_permanen/{id}', [GuruController::class, 'hapus_permanen']);
 Route::get('/guru/hapus_permanen_semua', [GuruController::class, 'hapus_permanen_semua']);
+
+// Relasi one to one
+Route::get('/pengguna', [PenggunaController::class, 'index']);
