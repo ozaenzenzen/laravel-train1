@@ -14,6 +14,7 @@
         <a href="/input" class="list-group-item list-group-item-action">Link to Form Input Page</a>
         <a href="/karyawan" class="list-group-item list-group-item-action">Link to Karyawan Page</a>
         <a href="/guru" class="list-group-item list-group-item-action">Link to Guru Page</a>
+        <a href="/pengguna" class="list-group-item list-group-item-action">Link to Pengguna Page</a>
     </div>
 </div>
 @stop
