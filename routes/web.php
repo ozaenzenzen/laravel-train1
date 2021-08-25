@@ -7,6 +7,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\WebController;
 use Database\Seeders\PegawaiSeeder;
 use Illuminate\Support\Facades\Route;
 
@@ -89,3 +90,6 @@ Route::get('/guru/hapus_permanen_semua', [GuruController::class, 'hapus_permanen
 
 // Relasi one to one
 Route::get('/pengguna', [PenggunaController::class, 'index']);
+
+// Relasi one to many
+Route::get('/article', [WebController::class, 'index']);
