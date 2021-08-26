@@ -9,8 +9,10 @@ use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\WebController;
+// use App\Http\Controllers\Auth;
 use Database\Seeders\PegawaiSeeder;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,3 +103,7 @@ Route::get('/article', [WebController::class, 'index']);
 
 // Relasi many to many
 Route::get('/anggota', [AnggotaHadiahController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
