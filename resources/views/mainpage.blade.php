@@ -16,6 +16,7 @@
         <a href="/guru" class="list-group-item list-group-item-action">Link to Guru Page</a>
         <a href="/pengguna" class="list-group-item list-group-item-action">Link to Pengguna Page</a>
         <a href="/article" class="list-group-item list-group-item-action">Link to Article Page</a>
+        <a href="/anggota" class="list-group-item list-group-item-action">Link to Anggota Hadiah Page</a>
     </div>
 </div>
 @stop
