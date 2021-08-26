@@ -7,6 +7,7 @@
 
 <div class="ml-4 container">
     <div class="list-group">
+        <a href="/welcome" class="list-group-item list-group-item-action">Link to Laravel Page</a>
         <a href="/dosen" class="list-group-item list-group-item-action">Link to Dosen Page</a>
         <a href="/formulir" class="list-group-item list-group-item-action">Link to Formulir Page</a>
         <a href="/blog" class="list-group-item list-group-item-action">Link to Blog Page</a>

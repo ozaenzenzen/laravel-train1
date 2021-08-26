@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div class="p-2 container-fluid" style="background-color: greenyellow; color:black">
+<div class="p-3 container-fluid text-black" style="background-color: greenyellow; color:black">
     <h1 class="h1">Anggota Page: Many to many</h1>
 </div>
 
