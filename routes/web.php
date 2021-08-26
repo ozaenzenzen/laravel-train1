@@ -32,6 +32,10 @@ Route::get('/', function () {
 //     return view('anotherpage');
 // });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('dosen', [DosenController::class, 'index']);
 // Route::get('dosen', 'DosenController@index'); //old style of laravel
 
