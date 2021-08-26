@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotaHadiahController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\FormController;
@@ -93,3 +94,6 @@ Route::get('/pengguna', [PenggunaController::class, 'index']);
 
 // Relasi one to many
 Route::get('/article', [WebController::class, 'index']);
+
+// Relasi many to many
+Route::get('/anggota', [AnggotaHadiahController::class, 'index']);
